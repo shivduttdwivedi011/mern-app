@@ -13,7 +13,7 @@ const App = () => {
     // Fetch all forms from the server
     const fetchForms = async () => {
         try {
-            const response = await axios.get('http://127.0.0.1:5000/api/forms');
+            const response = await axios.get('https://mern-app-backend-pvtl.onrender.com/api/forms');
             setForms(response.data);
         } catch (error) {
             console.error('Error fetching forms:', error);
@@ -27,7 +27,7 @@ const App = () => {
     // Handle form deletion
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://127.0.0.1:5000/api/form/${id}`);
+            await axios.delete(`https://mern-app-backend-pvtl.onrender.com/api/form/${id}`);
             fetchForms();
         } catch (error) {
             console.error('Error deleting form:', error);
