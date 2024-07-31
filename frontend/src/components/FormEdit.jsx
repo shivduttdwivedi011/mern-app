@@ -7,7 +7,7 @@ const FormEdit = ({ formId, refreshForms }) => {
 
     useEffect(() => {
         const fetchForm = async () => {
-            const response = await axios.get(`http://127.0.0.1:5000/api/form/${formId}`);
+            const response = await axios.get(`https://mern-app-backend-pvtl.onrender.com/api/form/${formId}`);
             setTitle(response.data.title);
             setFields(response.data.fields);
         };
@@ -22,7 +22,7 @@ const FormEdit = ({ formId, refreshForms }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://127.0.0.1:5000/api/form/${formId}`, { title, fields });
+        await axios.put(`https://mern-app-backend-pvtl.onrender.com/api/form/${formId}`, { title, fields });
         refreshForms();
     };
 
