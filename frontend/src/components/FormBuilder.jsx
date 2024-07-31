@@ -11,7 +11,7 @@ const FormBuilder = ({ refreshForms }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:5000/api/form', { title, fields });
+        await axios.post('https://mern-app-backend-pvtl.onrender.com/api/form', { title, fields });
         setTitle('');
         setFields([]);
         refreshForms();
