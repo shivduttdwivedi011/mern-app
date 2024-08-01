@@ -9,10 +9,11 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://127.0.0.1:27017/simple-form-builder', {
+mongoose.connect('mongodb+srv://shivdutt_dwivedi:Qwerty0@cluster0.zr6ks8i.mongodb.net/simple-form-builder?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
+
 
 app.use('/api', formRoutes);
 
